@@ -15,5 +15,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.slimscroll
+//= require iCheck
 //= require app
 //= require_tree .
