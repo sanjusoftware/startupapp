@@ -1,0 +1,20 @@
+<div class="login-box-body">
+  <p class="login-box-msg">Resend confirmation instructions</p>
+  <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="form-group has-feedback">
+        <%= f.text_field :email, class: 'form-control', placeholder: 'Email', autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <%= f.submit 'Resend confirmation instructions', class: 'btn btn-primary btn-block btn-flat' %>
+        </div><!-- /.col -->
+      </div>
+
+  <% end %>
+
+  <%= render 'devise/shared/links' %>
+
+</div><!-- /.login-box-body -->

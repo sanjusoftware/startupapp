@@ -12,6 +12,8 @@ module Shrota
       config.to_prepare do
         Devise::SessionsController.layout 'login'
         Devise::RegistrationsController.layout 'login'
+        Devise::PasswordsController.layout 'login'
+        Devise::ConfirmationsController.layout 'login'
       end
 
     # Settings in config/environments/* take precedence over those specified here.
