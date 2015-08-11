@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
+gem 'rails', '4.2.1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -31,6 +31,9 @@ gem 'haml-rails'
 gem 'adminlte2-rails'
 gem 'devise'
 gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -55,6 +58,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-
-gem "devise"
