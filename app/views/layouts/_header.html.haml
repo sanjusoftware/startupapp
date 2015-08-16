@@ -1,7 +1,7 @@
 / Main Header
 %header.main-header
   / Logo
-  %a.logo{:href => "/"}
+  %a.logo{:href => '/'}
     / mini logo for sidebar mini 50x50 pixels
     %span.logo-mini
       %b
@@ -22,7 +22,7 @@
         / Messages: style can be found in dropdown.less
         %li.dropdown.messages-menu
           / Menu toggle button
-          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+          %a.dropdown-toggle{"data-toggle" => 'dropdown', :href => "#"}
             %i.fa.fa-envelope-o
             %span.label.label-success 4
           %ul.dropdown-menu
@@ -34,7 +34,7 @@
                   / start message
                   %a{:href => "#"}
                     .pull-left
-                      = image_tag(current_user.image, class: 'img-circle')
+                      = image_tag(current_user.profile_photo, class: 'img-circle')
                     / Message title and timestamp
                     %h4
                       Support Team
@@ -99,14 +99,14 @@
             / Menu Toggle Button
             %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
               / The user image in the navbar
-              = image_tag(current_user.image, class: 'user-image')
+              = image_tag(current_user.profile_photo, class: 'user-image')
               / hidden-xs hides the username on small devices so only the image appears.
               %span.hidden-xs
                 = current_user.full_name.titleize
             %ul.dropdown-menu
               / The user image in the menu
               %li.user-header
-                = image_tag(current_user.image, class: 'img-circle')
+                = image_tag(current_user.profile_photo, class: 'img-circle')
                 %p
                   = "#{current_user.full_name.titleize} - Web Developer"
                   %small

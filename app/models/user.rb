@@ -39,4 +39,12 @@ class User < ActiveRecord::Base
   def send_devise_notification(notification, *args)
     devise_mailer.send(notification, self, *args).deliver_later
   end
+
+  def profile_photo
+    if provider == 'facebook'
+      image + '?type=normal'
+    else
+      image
+    end
+  end
 end

@@ -6,7 +6,7 @@
     - if user_signed_in?
       .user-panel
         .pull-left.image
-          = image_tag(current_user.image, class: 'img-circle')
+          = image_tag(current_user.profile_photo, class: 'img-circle')
         .pull-left.info
           %p
             = current_user.full_name.titleize

@@ -1,6 +1,6 @@
 .social-auth-links.text-center
   %p - OR -
-  %a.btn.btn-block.btn-social.btn-facebook.btn-flat{:href => '#'}
+  = link_to user_omniauth_authorize_path(:facebook), class: 'btn btn-block btn-social btn-facebook btn-flat' do
     %i.fa.fa-facebook
     Sign in using Facebook
   = link_to user_omniauth_authorize_path(:google_oauth2), class: 'btn btn-block btn-social btn-google-plus btn-flat' do
