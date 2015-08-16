@@ -17,14 +17,18 @@ class User < ActiveRecord::Base
 
   def self.from_omniauth(auth)
     user = User.find_by_provider_and_uid(auth.provider, auth.uid)
-    user = User.create do |user|
+    if user.blank?
+      user = User.new
       user.email = auth.info.email if auth.info.email
       user.full_name = auth.info.name
       user.image = auth.info.image
       user.provider = auth.provider
       user.uid = auth.uid
-      user.encrypted_password = Devise.friendly_token[0,20]
-    end  if user.blank?
+      user.password = Devise.friendly_token[0,20]
+      user.skip_confirmation!
+      user.save!
+    end
+
     unless user.image == auth.info.image
       user.image = auth.info.image
       user.save!

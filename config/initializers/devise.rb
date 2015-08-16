@@ -240,7 +240,8 @@ Devise.setup do |config|
   # up on your models and hooks.
   config.omniauth :twitter, Rails.application.secrets.twitter_app_id, Rails.application.secrets.twitter_app_secret
   config.omniauth :facebook, Rails.application.secrets.facebook_app_id, Rails.application.secrets.facebook_app_secret, :display => 'popup'
-  config.omniauth :google_oauth2, Rails.application.secrets.google_app_id, Rails.application.secrets.google_app_secret
+  config.omniauth :google_oauth2, Rails.application.secrets.google_app_id, Rails.application.secrets.google_app_secret,
+                  {scope: 'email, profile', image_aspect_ratio: 'square',  image_size: 90}
 
 
   # ==> Warden configuration
