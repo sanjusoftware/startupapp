@@ -3,7 +3,7 @@ Shrota::Application.routes.draw do
   devise_for :users,
              path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification',
                            unlock: 'unblock', sign_up: 'register' },
-             :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks'}
+             :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks', registrations: 'users/registrations'}
 
   get 'welcome/index'
   # The priority is based upon order of creation: first created -> highest priority.

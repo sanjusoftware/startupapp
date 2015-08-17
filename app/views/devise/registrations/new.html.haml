@@ -8,12 +8,13 @@
     .form-group.has-feedback
       = f.text_field :email, class: 'form-control', placeholder: 'Email', autofocus: true
       %span.glyphicon.glyphicon-envelope.form-control-feedback
-    .form-group.has-feedback
-      = f.password_field :password, class: 'form-control', placeholder: 'Password', autocomplete: 'off'
-      %span.glyphicon.glyphicon-lock.form-control-feedback
-    .form-group.has-feedback
-      = f.password_field :password_confirmation, class: 'form-control', placeholder: 'Retype password', autocomplete: 'off'
-      %span.glyphicon.glyphicon-lock.form-control-feedback
+    -if resource.password_required?
+      .form-group.has-feedback
+        = f.password_field :password, class: 'form-control', placeholder: 'Password', autocomplete: 'off'
+        %span.glyphicon.glyphicon-lock.form-control-feedback
+      .form-group.has-feedback
+        = f.password_field :password_confirmation, class: 'form-control', placeholder: 'Retype password', autocomplete: 'off'
+        %span.glyphicon.glyphicon-lock.form-control-feedback
     .row
       .col-xs-8
         .checkbox.icheck

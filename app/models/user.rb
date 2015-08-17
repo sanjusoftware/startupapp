@@ -26,12 +26,10 @@ class User < ActiveRecord::Base
       user.uid = auth.uid
       user.password = Devise.friendly_token[0,20]
       user.skip_confirmation!
-      user.save!
     end
 
     unless user.image == auth.info.image
       user.image = auth.info.image
-      user.save!
     end
     user
   end
