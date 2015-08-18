@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Shrota::Application.config.secret_key_base = 'b584db2558b45d35e447d21fbeaa361450ea24ed9808deebdddd539d349a5d2cb7b355abf1e071cc10c37ce9dece0a3653f299a79ae6328aef552d10e261a375'
+Startupapp::Application.config.secret_key_base = 'b584db2558b45d35e447d21fbeaa361450ea24ed9808deebdddd539d349a5d2cb7b355abf1e071cc10c37ce9dece0a3653f299a79ae6328aef552d10e261a375'

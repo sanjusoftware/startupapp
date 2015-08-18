@@ -34,6 +34,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
+gem 'rename'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
